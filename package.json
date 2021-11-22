@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev", 
+    "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
@@ -14,6 +14,7 @@
   "dependencies": {
     "next": "^12.0.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-jsx": "^5.0.0-beta.3"
   }
 }
