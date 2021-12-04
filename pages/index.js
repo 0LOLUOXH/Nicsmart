@@ -15,15 +15,15 @@ export default function Home(){
                 </ul>
             </div>
 
-            <nav class="indigo darken-4">
+            <nav class=" blue-grey darken-4">
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo center">Logo</a>
+                    <a href="#!" class="brand-logo center"><img height="35px" src="/image/lo.png" alt="xdxdd" /></a>
                     <ul class="left hide-on-med-and-down">
                         <li><a href="#">Promociones</a></li>
                         <li><a href="#">Productos</a></li>
                         <li class="active"><a href="#">Marcas</a></li>
 
-                        <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Cuenta</a>
+                        <a border-radius ="70%" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Cuenta</a>
                         <ul id='dropdown1' class='dropdown-content'>
                             <li><a href="#!">Iniciar de sesión</a></li>
                             <li><a href="#!">Crear cuenta</a></li>
@@ -34,33 +34,88 @@ export default function Home(){
                 </div>
             </nav>
 
-            <div class="row">
-
-                <div class="col s9">
-
-                </div>
+            <div class="blue-grey darken-2" class="row">
 
                 <div class="col s3">
-                <div class="carousel">
-                    <a class="carousel-item" href="#one!"><div class="card">
-                        <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="images/office.jpg"/>
-                        </div>
-                        <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                        <p><a href="#">This is a link</a></p>
-                        </div>
-                        <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                        </div>
-                    </div></a>
-                    <a class="carousel-item" href="#two!"><img src="#"/></a>
-                    <a class="carousel-item" href="#three!"><img src="#"/></a>
-                    <a class="carousel-item" href="#four!"><img src="#"/></a>
-                    <a class="carousel-item" href="#five!"><img src="#"/></a>
+
                 </div>
+
+                <div class="col s9">
+                    
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/image/mn.jpg" alt="xdxdd"/>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                            </div>
+                            <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/image/mn.jpg" alt="xdxdd"/>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                            </div>
+                            <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/image/mn.jpg" alt="xdxdd"/>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                            </div>
+                            <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col s3">
+                        <div class="card">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="/image/mn.jpg" alt="xdxdd"/>
+                            </div>
+                            <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">This is a link</a></p>
+                            </div>
+                            <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <img class="col s12" src="/image/ba.png" alt="xsxxs" />
+
                 </div>
+
+                
+                
 
             </div>
             
