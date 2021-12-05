@@ -1,5 +1,6 @@
 import styles from '../styles/styles'
 import Head from 'next/head'
+import XD from '../components/fragment'
 
 export default function Home(){
 
@@ -7,10 +8,10 @@ export default function Home(){
         <>
             <Head><title>Nicsmart</title></Head>
             <div className = "jou" ><h1>hello</h1></div>
-            <style jsx>{
-                styles
-                }</style>
-
+            <XD/>
+            <style jsx>
+                {styles}
+            </style>
         </>
 
     )
