@@ -37,14 +37,14 @@ export default function Home(){
 
             <div class="row">
 
-            <div class="conteiner">
+            <div class="conteiner" class="pink accent-3">
                     <div class="col s4">
                         <img heigth="auto" width="350px" src="/image/un.svg" alt="xdxdxd" />
                     </div>
 
                     <div class="col s8">
                         <div class="card-panel">
-                            <p class="teal-tex accent-2">Productos de la semana</p>
+                            <p class="teal-tex accent-2">Smartphones de la semana</p>
                         </div>
                     </div>
                 
@@ -52,68 +52,68 @@ export default function Home(){
 
                 <div class="col s8">
                     
-                    <div class="col s3 ">
+                    <div class="col s4 ">
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="/image/ba.png" alt="xdxdd"/>
+                                <img class="activator" src="https://i.blogs.es/97812d/poco-f3-pro-00-01/450_1000.jpg" alt="xdxdd"/>
                             </div>
                             <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
+                            <span class="card-title activator grey-text text-darken-4">Poco X3 Pro<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">Añadir al carro</a></p>
                             </div>
                             <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <span class="card-title grey-text text-darken-4">Poco X3 Pro<i class="material-icons right">close</i></span>
                             <p>Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="col s3">
+                    <div class="col s4">
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="/image/ba.png" alt="xdxdd"/>
+                                <img class="activator" src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2021/07/Google-Pixel-6-Portfolio-Shot-scaled.jpg" alt="xdxdd"/>
                             </div>
                             <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
+                            <span class="card-title activator grey-text text-darken-4">Google Pixel 6 Pro<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">Añadir al carro</a></p>
                             </div>
                             <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <span class="card-title grey-text text-darken-4">Google Pixel 6 Pro<i class="material-icons right">close</i></span>
                             <p>Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="col s3">
+                    <div class="col s4">
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="/image/ba.png" alt="xdxdd"/>
+                                <img class="activator" src="https://i.blogs.es/ebed1b/analisis-iphone-13-pro-iphone-13-pro-max-applesfera-05/450_1000.jpeg" alt="xdxdd"/>
                             </div>
                             <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
+                            <span class="card-title activator grey-text text-darken-4">Iphone 13 Pro<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">Añadir al carro</a></p>
                             </div>
                             <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <span class="card-title grey-text text-darken-4">Iphone 13 Pro<i class="material-icons right">close</i></span>
                             <p>Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
 
                         </div>
                     </div>
 
-                    <div class="col s3">
+                    <div class="col s4">
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="/image/ba.png" alt="xdxdd"/>
+                                <img class="activator" src="https://www.tuexperto.com/wp-content/uploads/2021/05/poco-f3-analisis-review-opiniones-5-1200x640.jpg" alt="xdxdd"/>
                             </div>
                             <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
+                            <span class="card-title activator grey-text text-darken-4">Poco F3<i class="material-icons right">more_vert</i></span>
+                            <p><a href="#">Añadir al carro</a></p>
                             </div>
                             <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                            <span class="card-title grey-text text-darken-4">Poco F3<i class="material-icons right">close</i></span>
                             <p>Here is some more information about this product that is only revealed once clicked on.</p>
                             </div>
 
