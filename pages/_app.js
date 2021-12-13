@@ -1,9 +1,13 @@
 import { useEffect, lazy } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import {useAuth0} from '@auth0/auth0-react';
+import {Auth0Provider} from '@auth0/auth0-react';
 // import M from 'materialize-css'
 
-export default function Layout({Component, pageProps}){
+
+
+export default function Layout({Component, pageProps, domain, clientId}){
     async function initMaterialize(){
         const M = await import('materialize-css')
         M.AutoInit()
@@ -14,7 +18,7 @@ export default function Layout({Component, pageProps}){
             initMaterialize()
         }
     }, [])
-
+    console.log( domain, clientId );
     return(
         <>
             <Head>
@@ -27,8 +31,22 @@ export default function Layout({Component, pageProps}){
 
             </Head>
             <Script strategy='afterInteractive' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"/>
-            <Component {...pageProps} />
+            <Auth0Provider
+            domain={"dev-fbl4xiyw.us.auth0.com"}
+            clientId = {"r8MOJbL3McvltAhZzodQpaLGeQK3xlin"} 
+            redirectUri = {"http://localhost:3000"}
+            >
+            
+                <Component {...pageProps} />
+            </Auth0Provider>
+            
         </>
     )
+ 
+}
+export async function getStaticProps() {
+    const domain = process.env.REACT_APP_AUTH0_DOMAIN
+    const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
 
+    return { props: {clientId, domain} }
 }
