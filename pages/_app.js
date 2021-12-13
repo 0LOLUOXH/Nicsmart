@@ -1,14 +1,11 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
-<<<<<<< HEAD
 import {useAuth0} from '@auth0/auth0-react';
 import {Auth0Provider} from '@auth0/auth0-react';
 // import M from 'materialize-css'
-=======
 import  '../styles/styles.css'
 import Link from 'next/link';
->>>>>>> 386cfd275c69155b6f05d1fd2344d390bb995704
 
 
 
@@ -39,17 +36,15 @@ export default function Layout({Component, pageProps, domain, clientId}){
                 <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"></link>
             </Head>
             <Script strategy='afterInteractive' src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"/>
-<<<<<<< HEAD
             <Auth0Provider
             domain={"dev-fbl4xiyw.us.auth0.com"}
             clientId = {"r8MOJbL3McvltAhZzodQpaLGeQK3xlin"} 
             redirectUri = {"http://localhost:3000"}
             >
+             
+                
             
-                <Component {...pageProps} />
-            </Auth0Provider>
             
-=======
             <header>
                 <nav className=" blue-grey darken-4">
                     <div className="nav-wrapper">
@@ -71,8 +66,9 @@ export default function Layout({Component, pageProps, domain, clientId}){
                 </nav>
             </header>
             <Component {...pageProps} />
->>>>>>> 386cfd275c69155b6f05d1fd2344d390bb995704
+            </Auth0Provider>
         </>
+
     )
  
 }
