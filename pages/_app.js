@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
-import {useAuth0} from '@auth0/auth0-react';
 import {Auth0Provider} from '@auth0/auth0-react';
+import Header from '../components/header';
 // import M from 'materialize-css'
 import  '../styles/styles.css'
 import Link from 'next/link';
@@ -10,6 +10,7 @@ import Link from 'next/link';
 
 
 export default function Layout({Component, pageProps, domain, clientId}){
+    
     async function initMaterialize(){
         const M = await import('materialize-css')
         M.AutoInit()
@@ -45,26 +46,7 @@ export default function Layout({Component, pageProps, domain, clientId}){
                 
             
             
-            <header>
-                <nav className=" blue-grey darken-4">
-                    <div className="nav-wrapper">
-                    <Link href="/"><a href="#!" className="brand-logo center"><img height="35px" src="/images/lo.png" alt="xdxdd" /></a></Link>
-                        <ul className="left hide-on-med-and-down">
-                            <li><a href="#">Promociones</a></li>
-                            <li><a href="#">Productos</a></li>
-                            <li className="active"><a href="#">Marcas</a></li>
-
-                            <a className='dropdown-trigger btn' href='#' data-target='dropdown1'>Cuenta</a>
-                            <ul id='dropdown1' className='dropdown-content'>
-                                <li><a href="#!">Iniciar de sesión</a></li>
-                                <li><a href="#!">Crear cuenta</a></li>
-                                <li className="divider" tabIndex="-1"></li>
-                                <li><a href="#!">Cerrar sesión</a></li>
-                            </ul>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
+           <Header /> 
             <Component {...pageProps} />
             </Auth0Provider>
         </>
