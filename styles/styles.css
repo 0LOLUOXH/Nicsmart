@@ -1,0 +1,13 @@
+body {
+    font-family: 'Rubik', Helvetica, sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: bold;
+}
+
+:root {
+    --blue-gradient: linear-gradient(to right bottom, rgb(0, 127, 255), rgb(0, 89, 178) 120%);
+    --shadow-1: rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px;
+}

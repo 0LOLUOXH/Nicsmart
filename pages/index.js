@@ -1,6 +1,8 @@
-import styles from "../styles/styles"
 import Head from "next/head"
+import styles from '../styles/test.js'
 export default function Home(){
+
+    
 
     return (
         <>
@@ -20,35 +22,16 @@ export default function Home(){
                 </ul>
             </div>
 
-            <nav className=" blue-grey darken-4">
-                <div className="nav-wrapper">
-                    <a href="#!" className="brand-logo center"><img height="35px" src="/image/lo.png" alt="xdxdd" /></a>
-                    <ul className="left hide-on-med-and-down">
-                        <li><a href="#">Promociones</a></li>
-                        <li><a href="#">Productos</a></li>
-                        <li className="active"><a href="#">Marcas</a></li>
-
-                        <a className='dropdown-trigger btn' href='#' data-target='dropdown1'>Cuenta</a>
-                        <ul id='dropdown1' className='dropdown-content'>
-                            <li><a href="#!">Iniciar de sesión</a></li>
-                            <li><a href="#!">Crear cuenta</a></li>
-                            <li className="divider" tabIndex="-1"></li>
-                            <li><a href="#!">Cerrar sesión</a></li>
-                        </ul>
-                    </ul>
-                </div>
-            </nav>
-
             <div className="row">
 
             <div className="conteiner">
                     <div className="col s4">
-                        <img heigth="auto" width="350px" src="/image/un.svg" alt="xdxdxd" />
+                        <img heigth="auto" width="350px" src="/images/un.svg" alt="xdxdxd" />
                     </div>
 
                     <div className="col s8">
-                        <div className="card-panel">
-                            <p className="teal-tex accent-2">Productos de la semana</p>
+                        <div className="card-panel" >
+                            <p className="test">Productos de la semana</p>
                         </div>
                     </div>
                 
@@ -56,10 +39,10 @@ export default function Home(){
 
                 <div className="col s8">
                     
-                    <div className="col s3 ">
+                    <div className="col s4 ">
                         <div className="card">
                             <div className="card-image waves-effect waves-block waves-light">
-                                <img className="activator" src="/image/ba.png" alt="xdxdd"/>
+                                <img className="activator" src="/images/ba.png" alt="xdxdd"/>
                             </div>
                             <div className="card-content">
                             <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
@@ -73,10 +56,10 @@ export default function Home(){
                         </div>
                     </div>
 
-                    <div className="col s3">
+                    <div className="col s4">
                         <div className="card">
                             <div className="card-image waves-effect waves-block waves-light">
-                                <img className="activator" src="/image/ba.png" alt="xdxdd"/>
+                                <img className="activator" src="/images/ba.png" alt="xdxdd"/>
                             </div>
                             <div className="card-content">
                             <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
@@ -90,10 +73,10 @@ export default function Home(){
                         </div>
                     </div>
 
-                    <div className="col s3">
+                    <div className="col s4">
                         <div className="card">
                             <div className="card-image waves-effect waves-block waves-light">
-                                <img className="activator" src="/image/ba.png" alt="xdxdd"/>
+                                <img className="activator" src="/images/ba.png" alt="xdxdd"/>
                             </div>
                             <div className="card-content">
                             <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
@@ -107,10 +90,10 @@ export default function Home(){
                         </div>
                     </div>
 
-                    <div className="col s3">
+                    <div className="col s4">
                         <div className="card">
                             <div className="card-image waves-effect waves-block waves-light">
-                                <img className="activator" src="/image/ba.png" alt="xdxdd"/>
+                                <img className="activator" src="/images/ba.png" alt="xdxdd"/>
                             </div>
                             <div className="card-content">
                             <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
@@ -133,9 +116,9 @@ export default function Home(){
             </div>
           
           
-        <style jsx>
-            { styles }
-        </style>
+            <style jsx>
+                {styles}
+            </style>
         </>
 
     )
