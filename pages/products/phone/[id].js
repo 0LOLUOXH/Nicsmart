@@ -21,7 +21,7 @@ export default function XD() {
             <section className="details">
                 <section className="product">
                     <div className="article">
-                        <img src="/images/product.png" alt="Poco x3 Pro GOD" />
+                        <img src="https://i.blogs.es/97812d/poco-f3-pro-00-01/450_1000.jpg" alt="Poco x3 Pro GOD" />
                     </div>
                 </section>
                 <section className='description-product'>
@@ -29,13 +29,41 @@ export default function XD() {
                         <h1>Poco x3 Pro GOD</h1>
                     </div>
                     <ul className="list-info">
-                        <li className='list-info-item'>Procesador: SnapDragon 860</li>
-                        <li className='list-info-item'>GPU: Adreno 640</li>
-                        <li className='list-info-item'>Batería: 5160mAh</li>
-                        <li className='list-info-item'>Memoria: 128gb / 256gb</li>
-                        <li className='list-info-item'>Camara Trasera: 48MP + 8MP + 2MP + 2MP</li>
-                        <li className='list-info-item'>Camara Frontal: 20MP</li>
-                        <li className='list-info-item'>Precio: 285$ / 310$</li>
+                        <li className='list-info-item'><i className="material-icons">
+                                memory
+                            </i> CPU: SnapDragon 860
+                        </li>
+
+                        <li className='list-info-item'><i className="material-icons">
+                                developer_board
+                            </i> GPU: Adreno 640
+                        </li>
+
+                        <li className='list-info-item'><i className="material-icons">
+                                battery_full 
+                            </i> Batería: 5160mAh
+                        </li>
+                        
+                        <li className='list-info-item'><i className="material-icons">
+                                storage 
+                            </i> Memoria: 128gb / 256gb
+                        </li>
+                        
+                        <li className='list-info-item'><i className="material-icons">
+                                camera_rear
+                            </i> Camara Trasera: 48MP + 8MP + 2MP + 2MP
+                        </li>
+                        
+                        <li className='list-info-item'><i className="material-icons">
+                                camera_front
+                            </i> Camara Frontal: 20MP
+                        </li>
+                        
+                        <li className='list-info-item'><i className="material-icons">
+                                attach_money
+                            </i> Precio: 285$ / 310$
+                        </li>
+
                     </ul>
                     <div align='center'>
                     <Link href="/">

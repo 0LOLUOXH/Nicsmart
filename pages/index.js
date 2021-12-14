@@ -1,6 +1,8 @@
-import styles from "../styles/styles"
 import Head from "next/head"
+import styles from '../styles/test.js'
 export default function Home(){
+
+    
 
     return (
         <>
@@ -28,8 +30,8 @@ export default function Home(){
                     </div>
 
                     <div className="col s8">
-                        <div className="card-panel">
-                            <p className="teal-tex accent-2">Productos de la semana</p>
+                        <div className="card-panel" >
+                            <p className="test">Productos de la semana</p>
                         </div>
                     </div>
                 
@@ -37,7 +39,7 @@ export default function Home(){
 
                 <div className="col s8">
                     
-                    <div className="col s3 ">
+                    <div className="col s4 ">
                         <div className="card">
                             <div className="card-image waves-effect waves-block waves-light">
                                 <img className="activator" src="/images/ba.png" alt="xdxdd"/>
@@ -54,7 +56,7 @@ export default function Home(){
                         </div>
                     </div>
 
-                    <div className="col s3">
+                    <div className="col s4">
                         <div className="card">
                             <div className="card-image waves-effect waves-block waves-light">
                                 <img className="activator" src="/images/ba.png" alt="xdxdd"/>
@@ -71,7 +73,7 @@ export default function Home(){
                         </div>
                     </div>
 
-                    <div className="col s3">
+                    <div className="col s4">
                         <div className="card">
                             <div className="card-image waves-effect waves-block waves-light">
                                 <img className="activator" src="/images/ba.png" alt="xdxdd"/>
@@ -88,7 +90,7 @@ export default function Home(){
                         </div>
                     </div>
 
-                    <div className="col s3">
+                    <div className="col s4">
                         <div className="card">
                             <div className="card-image waves-effect waves-block waves-light">
                                 <img className="activator" src="/images/ba.png" alt="xdxdd"/>
@@ -114,9 +116,9 @@ export default function Home(){
             </div>
           
           
-        <style jsx>
-            { styles }
-        </style>
+            <style jsx>
+                {styles}
+            </style>
         </>
 
     )
