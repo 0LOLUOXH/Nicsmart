@@ -15,3 +15,76 @@ model user {
   email String @unique
   image String
 }
+
+// products
+model phone {
+    id    String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+    name  String
+    cpu   String
+    ram   Int
+    gpu   String
+    memory Int[]
+    camara_frontal Int[]
+    camara_trasera Int[]
+    price Float
+    image String
+    description String
+}
+
+model laptop {
+    id    String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+    name  String
+    cpu   String
+    ram   Int
+    gpu   String
+    memory Int[]
+    camara_frontal Int[]
+    price Float
+    image String
+    description String
+}
+
+// components
+model cpu {
+    id    String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+    name  String
+    cores Int
+    threads Int
+    price Float
+    image String
+    description String
+}
+
+model gpu {
+    id    String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+    name  String
+    ram Int
+    type String // ddr5, ddr3, ddr4
+    price Float
+    image String
+    description String
+}
+
+model memory {
+    id    String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+    name  String
+    memory_count Int
+    type String // UFS
+    price Float
+    image String
+    description String
+}
+
+// utilidades
+
+model headset {
+    id    String @id @default(dbgenerated()) @map("_id") @db.ObjectId
+    name  String
+    micro String // Cancelación de ruido unidireccional de 0.236 in.
+    frequency Int // Frecuencia de muestreo de 20Hz
+    price Float
+    image String
+    description String
+}
+
+

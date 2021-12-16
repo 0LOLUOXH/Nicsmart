@@ -1,3 +1,4 @@
+import App from 'next/app'
 import { useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
@@ -5,12 +6,12 @@ import {Auth0Provider} from '@auth0/auth0-react';
 import Header from '../components/header';
 // import M from 'materialize-css'
 import  '../styles/styles.css'
-import Link from 'next/link';
+import { useApollo } from '../lib/apollo';
+import { ApolloProvider } from '@apollo/client';
 
+export default function Layout({ Component, pageProps, uri }){
+    const intialApolloState = useApollo(pageProps.initialApolloState, uri)
 
-
-export default function Layout({Component, pageProps, domain, clientId}){
-    
     async function initMaterialize(){
         const M = await import('materialize-css')
         M.AutoInit()
@@ -21,7 +22,6 @@ export default function Layout({Component, pageProps, domain, clientId}){
             initMaterialize()
         }
     }, [])
-    console.log( domain, clientId );
     return(
         <>
             <Head>
@@ -45,18 +45,22 @@ export default function Layout({Component, pageProps, domain, clientId}){
              
                 
             
-            
-           <Header /> 
-            <Component {...pageProps} />
+                <ApolloProvider client={intialApolloState}>
+                    <Header />
+                    <Component {...pageProps} />
+                </ApolloProvider>
             </Auth0Provider>
         </>
 
     )
  
 }
-export async function getStaticProps() {
+
+Layout.getInitialProps = async (appContext) => {
     const domain = process.env.REACT_APP_AUTH0_DOMAIN
     const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
+    console.log(process.env.GRAPHQL_URI)
+    const appProps = await App.getInitialProps(appContext);
 
-    return { props: {clientId, domain} }
+    return { ...appProps,uri:  process.env.GRAPHQL_URI}
 }
