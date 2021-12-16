@@ -4,6 +4,7 @@ import Link from 'next/link';
 import LogoutButton from './LogoutButton';
 import Profile from './Profile';
 import header from './styles/header';
+
 export default function Header() {
     const { loginWithRedirect} = useAuth0();
     return (
@@ -11,7 +12,7 @@ export default function Header() {
         <header>
         <nav className=" blue-grey darken-4 d-flex header" >
             <div className="nav-wrapper">
-            <Link href="/"><a href="#!" className="brand-logo center"><img height="35px" src="/images/lo.png" alt="xdxdd" /></a></Link>
+            <Link href="/"><a href="#!" className="brand-logo center header-logo"><img height="35px" src="/images/lo.png" alt="xdxdd" /></a></Link>
                 <ul className="left hide-on-med-and-down">
                     <li><a href="#">Promociones</a></li>
                     <li><a href="#">Productos</a></li>
@@ -22,7 +23,7 @@ export default function Header() {
                         <li><a href="#!" onClick={() => loginWithRedirect()}>Iniciar de sesión</a></li> 
                         <li><a>Crear cuenta</a></li>
                         <li className="divider" tabIndex="-1"></li>
-                        <li> <LogoutButton/> </li>
+                        <li><LogoutButton/> </li>
                     </ul>
                 </ul> 
                 <Profile/>
