@@ -37,8 +37,8 @@ model laptop {
     cpu   String
     ram   Int
     gpu   String
-    memory Int[]
-    camara_frontal Int[]
+    memory String
+    camara_frontal String
     price Float
     image String
     description String
@@ -68,8 +68,7 @@ model gpu {
 model memory {
     id    String @id @default(dbgenerated()) @map("_id") @db.ObjectId
     name  String
-    memory_count Int
-    type String // UFS
+    memory_count String
     price Float
     image String
     description String

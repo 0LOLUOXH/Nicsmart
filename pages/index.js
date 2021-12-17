@@ -14,7 +14,7 @@ export default function Home(){
 
             <div className="row">
 
-                <div className="col s5 test" >
+                <div className="col l6 test" >
                     <span className="simu_h2">Nicsmart</span>
                     <br/><span className="color_h2 simu_h2"> E-comerce</span>
                     <span className="simu_h2"> que</span>
@@ -25,7 +25,7 @@ en línea evitando que pierdas tu tiempo.</p></p>
                 </div> 
 
 
-                <div className="col l5 box_m ">
+                <div className="col l6 box_m ">
                     
                     <div className="caja">  
 
