@@ -24,94 +24,22 @@ export default function Home(){
 
             <div className="row">
 
-            <div className="conteiner">
-                    <div className="col s4">
-                        <img heigth="auto" width="350px" src="/images/un.svg" alt="xdxdxd" />
-                    </div>
-
-                    <div className="col s8">
-                        <div className="card-panel" >
-                            <p className="test">Productos de la semana</p>
-                        </div>
-                    </div>
+                <div className="col s5" className="test">
+                    <h2>Nicsmart<h2 className="color_h2">E-comerce</h2>te ahorra tiempo</h2>
+                    <p className="otro_h2">En nicsmart encontraras los productos de tu preferencia y<p>con disponibilidad de pago
+en línea evitando que pierdas tu tiempo.</p></p>
                 
-                </div>
+                </div> 
 
-                <div className="col s8">
+                <div class="col l5">
                     
-                    <div className="col s4 ">
-                        <div className="card">
-                            <div className="card-image waves-effect waves-block waves-light">
-                                <img className="activator" src="/images/ba.png" alt="xdxdd"/>
-                            </div>
-                            <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div className="card-reveal">
-                            <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                            </div>
+                    <div className="caja">  
 
-                        </div>
                     </div>
-
-                    <div className="col s4">
-                        <div className="card">
-                            <div className="card-image waves-effect waves-block waves-light">
-                                <img className="activator" src="/images/ba.png" alt="xdxdd"/>
-                            </div>
-                            <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div className="card-reveal">
-                            <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className="col s4">
-                        <div className="card">
-                            <div className="card-image waves-effect waves-block waves-light">
-                                <img className="activator" src="/images/ba.png" alt="xdxdd"/>
-                            </div>
-                            <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div className="card-reveal">
-                            <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div className="col s4">
-                        <div className="card">
-                            <div className="card-image waves-effect waves-block waves-light">
-                                <img className="activator" src="/images/ba.png" alt="xdxdd"/>
-                            </div>
-                            <div className="card-content">
-                            <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                            <p><a href="#">This is a link</a></p>
-                            </div>
-                            <div className="card-reveal">
-                            <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>
-                            <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                            </div>
-
-                        </div>
-                    </div>
-
+                    
                 </div>
 
-                <div className="col s3">
-                    <p>cascascsc</p>
-                </div>
+              
 
             </div>
           
