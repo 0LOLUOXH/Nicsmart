@@ -24,14 +24,16 @@ export default function Home(){
 
             <div className="row">
 
-                <div className="col s5" className="test">
-                    <h2>Nicsmart<h2 className="color_h2">E-comerce</h2>te ahorra tiempo</h2>
+                <div className="col s5 test" >
+                    <h2>Nicsmart </h2>
+                    <span className="color_h2 simu_h2"> E-comerce</span>
+                    <span className="simu_h2"> que te ahorra tiempo</span>
                     <p className="otro_h2">En nicsmart encontraras los productos de tu preferencia y<p>con disponibilidad de pago
 en línea evitando que pierdas tu tiempo.</p></p>
                 
                 </div> 
 
-                <div class="col l5">
+                <div className="col l5">
                     
                     <div className="caja">  
 

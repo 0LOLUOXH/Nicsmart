@@ -12,6 +12,11 @@ export default css`
         color: #007FFF;
     }
 
+    .simu_h2
+    {
+        font-size: 48pt; 
+    }
+
     .otro_h2
     {
         color: #9F9F9F;
@@ -28,7 +33,7 @@ export default css`
 
     .box
     {
-        
+
     }
 
 `
