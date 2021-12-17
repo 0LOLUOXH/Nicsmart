@@ -3,16 +3,17 @@ import resolvers from '../../graphql/resolvers'
 import typeDefs from '../../graphql/schemas'
 import Cors from 'micro-cors'
 
+import PrismaLib from '../../lib/prisma'
+
 const cors = Cors({})
 
 const apolloServer = new ApolloServer({
     resolvers,
     typeDefs,
     introspection: process.env.NODE_ENV !== 'production',
-    context: ({ req }) => {
+    context: () => {
         return {
-            headers: req.headers,
-            token: req.headers.authorization,
+            prisma: new PrismaLib()
         }
     },
 })

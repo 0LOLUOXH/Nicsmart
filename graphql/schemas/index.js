@@ -7,9 +7,9 @@ export  default gql`
         cpu:   String
         ram:   Int
         gpu:   String
-        memory: Int[]
-        camara_frontal: Int[]
-        camara_trasera: Int[]
+        memory: [Int]
+        camara_frontal: [Int]
+        camara_trasera: [Int]
         price: Float
         image: String
         description: String
@@ -21,8 +21,8 @@ export  default gql`
         cpu: String
         ram: Int
         gpu: String
-        memory: Int[]
-        camara_frontal: Int[]
+        memory: String
+        camara_frontal: String
         price: Float
         image: String
         description: String
@@ -40,6 +40,7 @@ export  default gql`
 
 
     type gpu {
+        id:    ID!
         name:  String
         ram: Int
         type: String
@@ -51,15 +52,14 @@ export  default gql`
     type memory {
         id:    ID!
         name:  String
-        memory_count: Int
-        type: String 
+        memory_count: String
         price: Float
         image: String
         description: String
 
     }
     type headset {
-        id  : ID!
+        id: ID!
         name:  String
         micro: String
         frequency: Int
@@ -77,9 +77,9 @@ export  default gql`
         getHeadsets: [headset]
     }
 
-    type Mutations {
-        createPhone(name: String, cpu: String, ram: Int, gpu: String, memory: Int[], camara_frontal: Int[], camara_trasera: Int[], price: Float, image: String, description: String): Phone
-        createLaptop(name: String, cpu: String, ram: Int, gpu: String, memory: Int[], camara_frontal: Int[], price: Float, image: String, description: String): laptop
+    type Mutation {
+        createPhone(name: String, cpu: String, ram: Int, gpu: String, memory: [Int], camara_frontal: [Int], camara_trasera: [Int], price: Float, image: String, description: String): Phone
+        createLaptop(name: String, cpu: String, ram: Int, gpu: String, memory: [Int], camara_frontal: [Int], price: Float, image: String, description: String): laptop
         createCpu(name: String, cores: Int, threads: Int, price: Float, image: String, description: String): cpu
         createGpu(name: String, ram: Int, type: String, price: Float, image: String, description: String): gpu
         createMemory(name: String, memory_count: Int, type: String, price: Float, image: String, description: String): memory

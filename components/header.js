@@ -14,8 +14,14 @@ export default function Header() {
             <div className="nav-wrapper">
             <Link href="/"><a href="#!" className="brand-logo center header-logo"><img height="35px" src="/images/lo.png" alt="xdxdd" /></a></Link>
                 <ul className="left hide-on-med-and-down">
-                    <li><a href="#">Promociones</a></li>
-                    <li><a href="#">Productos</a></li>
+                    <li>
+                        <a href="#">Promociones</a>
+                    </li>
+                    <li>
+                        <Link href="/products">
+                            <a>Productos</a>
+                        </Link>
+                    </li>
                     <li className="active"><a href="#">Marcas</a></li>
 
                     <a className='dropdown-trigger btn' href='#' data-target='dropdown1'  >Cuenta</a>
