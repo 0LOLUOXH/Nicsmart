@@ -23,7 +23,7 @@ export default function Header() {
                         <li><a href="#!" onClick={() => loginWithRedirect()}>Iniciar de sesión</a></li> 
                         <li><a>Crear cuenta</a></li>
                         <li className="divider" tabIndex="-1"></li>
-                        <li><LogoutButton/> </li>
+                        <li><LogoutButton/></li>
                     </ul>
                 </ul> 
                 <Profile/>
