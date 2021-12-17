@@ -21,7 +21,6 @@ export default function Header() {
                     <a className='dropdown-trigger btn' href='#' data-target='dropdown1'  >Cuenta</a>
                     <ul id='dropdown1' className='dropdown-content'>
                         <li><a href="#!" onClick={() => loginWithRedirect()}>Iniciar de sesión</a></li> 
-                        <li><a>Crear cuenta</a></li>
                         <li className="divider" tabIndex="-1"></li>
                         <li><LogoutButton/></li>
                     </ul>
