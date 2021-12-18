@@ -131,8 +131,8 @@ export default function Products() {
                         {findActive() ? findActive().description : '....'}
                     </h3>
                 </article>
-                { option.devices.active && !loading && <PhoneAndLaptops phone={products.getPhones} laptop={products.getGpus} /> }
-                { option.components.active && !loading && <Components gpu={products.getLaptops} cpu={products.getGpus} memory={products.getMemories} /> }
+                { option.devices.active && !loading && <PhoneAndLaptops phone={products.getPhones} laptop={products.getLaptops} /> }
+                { option.components.active && !loading && <Components gpu={products.getGpus} cpu={products.getCpus} memory={products.getMemories} /> }
                 { option.accesorios.active && !loading && <Accesorios headset={products.getHeadsets} /> }
             </section>
             <style jsx>

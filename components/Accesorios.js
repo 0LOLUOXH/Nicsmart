@@ -5,7 +5,7 @@ export default function Accesorios({ headset }) {
     return (
         <>
             <section className="products-laptop">
-                    <h5>Laptops</h5>
+                    <h5>Audifonos</h5>
                     <section className="products">
                         {
                             headset.map(product => (

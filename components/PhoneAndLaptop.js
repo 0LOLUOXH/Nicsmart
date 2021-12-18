@@ -39,7 +39,7 @@ export default function PhoneAndLaptops({ phone, laptop }) {
                     </section>
                 </section>
                 <section className="products-phone">
-                    <h5>Laptops</h5>
+                    <h5>Dispositivos</h5>
                     <section className="products">
                         {
                             phone.map(product => (
