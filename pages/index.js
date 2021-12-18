@@ -150,11 +150,15 @@ export default function Home(){
                     </div>
 
                     <div className="col l12 m">
-                        <a className="color_h2" href="#">Dispositivos inteligentes</a>
+                        <Link href="/products">
+                            <a className="color_h2" href="#">Dispositivos inteligentes</a>
+                        </Link>
                     </div>
 
                     <div className="col l12 m">
+                    <Link href="/products">
                         <a className="color_h2" href="#">Componentes</a>
+                    </Link>
                     </div>
                 </div>
             </footer>
