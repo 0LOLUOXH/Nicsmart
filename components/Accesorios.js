@@ -48,7 +48,7 @@ export default function Accesorios({ headset }) {
                                                 )
                                             }
                                         </button>
-                                        <Link href="/products/phone/a">
+                                        <Link href={`/products/headset/${product.name}`}>
                                             <a>Mas info</a>
                                         </Link>
                                     </div>

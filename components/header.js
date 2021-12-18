@@ -21,8 +21,6 @@ export default function Header() {
                             <a>Productos</a>
                         </Link>
                     </li>
-                    <li className="active"><a href="#">Marcas</a></li>
-
                     <a className='dropdown-trigger btn' href='#' data-target='dropdown1'  >Cuenta</a>
                     <ul id='dropdown1' className='dropdown-content'>
                         

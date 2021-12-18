@@ -65,9 +65,9 @@ export default function PhoneAndLaptops({ phone, laptop }) {
                                             )
                                         }
                                         </button>
-                                        <Link href="/products/phone/a">
+                                        <Link href={`/products/laptop/${product.name}`}>
                                             <a>Mas info</a>
-                                        </Link>
+                                        </Link>11
                                     </div>
                                 </div>
                             ))
@@ -97,7 +97,7 @@ export default function PhoneAndLaptops({ phone, laptop }) {
                                             )
                                             }
                                         </button>
-                                        <Link href="/products/phone/a">
+                                        <Link href={`/products/phone/${product.name}`}>
                                             <a>Mas info</a>
                                         </Link>
                                     </div>

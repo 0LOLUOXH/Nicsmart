@@ -11,11 +11,35 @@ export default css`
     border-radius: .25rem;
 }
 
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.article h1 {
+    background-color: rgb(148 148 148 / 50%);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform .2s ease-in-out;
+}
+
+.article h1:hover {
+    transform: scale(1.05);
+}
+
+.article img {
+    width: 80%;
+}
+
 .description-product {
     padding: .75rem;
     box-shadow: var(--shadow-1);
     color: #eee;
-    background-image: var(--blue-gradient);
+    background-color: #26a69a;
     border-radius: .5rem;
     
 }
@@ -69,4 +93,13 @@ export default css`
     margin-bottom: 200px;
 }
 
+@media screen and (min-width: 1024px) {
+    .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
 `
