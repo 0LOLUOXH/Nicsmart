@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from 'next/link';
 import styles from '../styles/test.js'
 export default function Home(){
 
@@ -70,9 +71,13 @@ export default function Home(){
                                     </div>
 
                                     <div className="col l5">
-                                        <a className="color_h2" href="#">
-                                            Descubrir
-                                        </a>
+                                        <Link href="/products">
+                                            <a className="color_h2" href="#">
+                                                Descubrir <i className="material-icons">
+                                                    navigate_next
+                                                </i>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -92,9 +97,13 @@ export default function Home(){
                                     </div>
 
                                     <div className="col l5">
-                                        <a className="color_h2" href="#">
-                                            Descubrir
-                                        </a>
+                                        <Link href="/products">
+                                            <a className="color_h2" href="#">
+                                                Descubrir<i className="material-icons">
+                                                    navigate_next
+                                                </i>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>     
