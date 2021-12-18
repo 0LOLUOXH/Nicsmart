@@ -1,9 +1,16 @@
 import css from 'styled-jsx/css'
 
 export default css` 
-    
+    .logo-hero-mobile {
+        display: none;
+    }
+    .container-home {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .test{
-        margin-top: 20%;
+        margin-top: 10rem;
     }
 
     .m
@@ -52,9 +59,14 @@ export default css`
         padding: 7%;
     }
 
+    .caja img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .box_m
     {
-        height: 560px;
         margin-top: 5%;
         background: #eeeeee;
         border-radius: 2%;
@@ -74,6 +86,13 @@ export default css`
         font-size: 5px;
         color: #fff;
     }
+    
+    .jut i {
+        background: #007FFF;
+        padding: .25rem;
+        border-radius: 50%;
+        overflow: hidden;
+    }
 
     .boton
     {
@@ -85,7 +104,13 @@ export default css`
         padding-bottom:20px;
         padding-left:40px;
         padding-right:40px;
-        background-color:#26a69a;
+        background-color:#007FFF;
+        margin-top: .5rem;
+        display: inline-block;
+    }
+
+    .boton i {
+        vertical-align: middle;
     }
 
     .caja_soon
@@ -139,6 +164,26 @@ export default css`
         
     }
 
+    .title-v h2 {
+        margin: 0;
+    }
+
+    .blue-title {
+        color: #007FFF;
+    }
+
+    .title-v p {
+        color: #9F9F9F;
+    }
+
+    .mini-cards h6 {
+        font-weight: bold;
+    }
+
+    .mini-cards span {
+        color: #9F9F9F;
+    }
+
     .e_p2
     {
         padding-left:12%;
@@ -155,7 +200,69 @@ export default css`
     .fot
     {
         height: 460px;
+        margin: 0;
         margin-top: 5%;
         background: #263238;
     }
+
+    @media screen and (max-width: 996px) {
+        
+        .logo-hero-mobile {
+            border-radius: .75rem;
+            display: block;
+        }
+        
+        .logo-hero {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mobile-hidden {
+            display: none;
+        }
+
+        .test {
+            width: 100%;
+            text-align: center;
+        }
+
+        .title-v {
+            text-align: center;
+        }
+
+        .caja_soon2 {
+            display: flex;
+            align-items: center;
+        }
+
+        .info-mini-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-minis {
+            width: 90vw;
+            margin: 0 auto;
+        }
+        
+        .fila-mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .end-title h2 {
+            font-size: 1.5rem;
+        }
+
+        .yellow-image img {
+            max-width: 90vw;
+            height: auto;
+        }
+
+        .simu_h2 {
+            margin-left: 0;
+        }
+
+    }
+    
 `

@@ -12,17 +12,19 @@ export default function Home(){
 
             
 
-            <div className="row">
-
+            <div className="row container-home">
                 <div className="col l6 test" >
+                    <div className="logo-hero">
+                        <img src="/images/ba.png" className="logo-hero-mobile" width={350} alt="" />
+                    </div>
                     <span className="simu_h2">Nicsmart</span>
                     <br/><span className="color_h2 simu_h2"> E-comerce</span>
                     <span className="simu_h2"> que</span>
                     <br/><span className="simu_h2"> te ahorra tiempo</span>
-                    <p className="otro_h2">En nicsmart encontrarás los productos de tu preferencia y<p>con disponibilidad de pago
-en línea evitando que pierdas tu tiempo.</p></p>
-
-                    <br/><a className="boton" href="#">
+                    <p className="otro_h2">En nicsmart encontrarás los productos de tu preferencia y<br></br>con disponibilidad de pago
+                    en línea evitando que pierdas tu tiempo.
+                    </p>
+                    <a className="boton" href="#">
                         Catálogo &nbsp;
                         <i className="material-icons">
                             import_contacts
@@ -32,47 +34,8 @@ en línea evitando que pierdas tu tiempo.</p></p>
                 </div> 
 
 
-                <div className="col l6 box_m2 ">
-                    
-                    <div className="caja">  
-                        <span className="jut">
-                            <i className="material-icons">
-                                phone_android
-                            </i>
-
-                            Poco X3 Pro
-                        </span>
-
-                        <br/><br/><span className="jut">
-                            <i className="material-icons">
-                                shopping_cart
-                            </i>
-                            <br/><br/><p>Adquiere el equipo más potente a un precio competitivo</p>
-                        </span>
-
-                        <div className="row caja_soon">
-                            <div className="col l7">
-                                <img src="https://i.blogs.es/97812d/poco-f3-pro-00-01/450_1000.jpg" alt="Poco x3 Pro GOD" />
-                            </div>
-
-                            <div className="col l5">
-                                <h6> 
-                                    Poco X3 Pro
-                                </h6>
-
-                                <span> Xiaomi - Poco</span>
-
-                            </div>
-
-                            <div className="col l5">
-                                <a className="color_h2" href="#">
-                                    Comprar 
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                    
+                <div className="col l6 box_m2 mobile-hidden">
+                        <img src="/images/righy-hero.png" alt="" />
                 </div>
 
             </div>
@@ -83,54 +46,54 @@ en línea evitando que pierdas tu tiempo.</p></p>
                             <span className="color_h2">Products</span>
                         </div>
 
-                        <div className="col l7 m" >
-                            <span className="simu2_h2 test">Encuentra una &nbsp;gran</span>
-                            <span className="simu2_h2">cantidad de</span>
-                            <br/><span className="simu2_h2">dispositivos con fácil</span>
-                            <br/><span className="color_h2 simu2_h2">disponibilidad</span>
-                            <p className="otro_h2">una e-commerce con diseño agradable y accesible a todos los usuarios.</p>
+                        <div className="col l7 m title-v" >
+                            <h2>Encuentra una gran cantidad de dispositivos, con facil</h2>
+                            <h2 className="blue-title">Disponibilidad</h2>
+                            <p>una e-commerce con diseño agradable y accesible a todos los usuarios.</p>
                         </div> 
 
-                        <div className="col l5 row">
+                        <div className="col l5 row fila-mobile">
                             <div className="col l12 m caja_soon2 row">
                                 <div className="col l5">
                                     <img src="/images/selfo.png" alt="icon" />
                                 </div>
+                                <div className="info-mini-card">
+                                    <div className="col l7 mini-cards">
+                                        <h6>
+                                            Dispositivos inteligentes
+                                        </h6>
 
-                                <div className="col l7">
-                                    <h6> 
-                                        Dispositivos inteligentes
-                                    </h6>
+                                        <span>Accede a laptops, smartphone</span>
 
-                                    <span>Accede a laptops, smartphone</span>
+                                    </div>
 
-                                </div>
-
-                                <div className="col l5">
-                                    <a className="color_h2" href="#">
-                                        Descubrir
-                                    </a>
+                                    <div className="col l5">
+                                        <a className="color_h2" href="#">
+                                            Descubrir
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         
-                            <div className="col l12 m caja_soon2">
+                            <div className="col l12 m caja_soon2 card-minis">
                                 <div className="col l5">
                                     <img src="/images/selfo.png" alt="icon" />
                                 </div>
+                                <div className="info-mini-card">
+                                    <div className="col l7 mini-cards">
+                                        <h6> 
+                                            Componentes
+                                        </h6>
 
-                                <div className="col l7">
-                                    <h6> 
-                                        Componentes
-                                    </h6>
+                                        <span>CPU, Tarjetas graficas, etc.</span>
 
-                                    <span>CPU, Tarjetas graficas, etc.</span>
+                                    </div>
 
-                                </div>
-
-                                <div className="col l5">
-                                    <a className="color_h2" href="#">
-                                        Descubrir
-                                    </a>
+                                    <div className="col l5">
+                                        <a className="color_h2" href="#">
+                                            Descubrir
+                                        </a>
+                                    </div>
                                 </div>
                             </div>     
                         </div>
@@ -144,15 +107,11 @@ en línea evitando que pierdas tu tiempo.</p></p>
                             <span className="color_h2">Disponibles</span>
                         </div>
 
-                        <div className="col l7 m" >
-                            <span className="simu2_h2 test">Estamos disponibles &nbsp;&nbsp;las</span>
-                            <span className="simu2_h2">24h del día, los 365</span>
-                            <br/><span className="simu2_h2">días del año con</span>
-                            <br/><span className="simu2_h2">disponibilidad y &nbsp;&nbsp;atención</span>
-                            <span className="simu2_h2">al cliente</span>
+                        <div className="col l7 m end-title" >
+                            <h2>Estamos disponibles 24hr/256d con disponibilidad global y atención al cliente.</h2>
                         </div>
 
-                        <div className="col l5 m">
+                        <div className="col l5 m yellow-image">
                             <img className="opo" src="/images/sl.png" alt="icon" />
                         </div>
 
