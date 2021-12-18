@@ -10,7 +10,6 @@ export default function XD() {
     
     useEffect(() => {
         const id = params.query.id;
-        console.log(id);
     }, [params]);
     
     return <>

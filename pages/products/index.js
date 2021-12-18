@@ -72,7 +72,6 @@ export default function Products() {
     const [option, setOption] = useState(initalState);
     // useContext
     const { products } = useContext(productContext);
-    console.log(products)
     // const { loading, error, data } = useQuery(GET_PRODUCTS);
 
     function findActive() {

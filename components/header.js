@@ -4,9 +4,11 @@ import Link from 'next/link';
 import LogoutButton from './LogoutButton';
 import Profile from './Profile';
 import header from './styles/header';
+import  CartButton  from './CartButton';
 
 export default function Header() {
-    const { loginWithRedirect, isAuthenticated} = useAuth0();
+    const { loginWithRedirect, isAuthenticated, user} = useAuth0();
+    console.log(user)
     return (
         <>
         <header>
@@ -29,7 +31,7 @@ export default function Header() {
                     </ul>
                 </ul> 
                 <Profile/>
-
+                <a href="#" data-target="slide-out" class="sidenav-trigger only-mobile"><i className="material-icons">menu</i></a>
             </div>
         </nav>
         
@@ -39,12 +41,28 @@ export default function Header() {
                     <i className="large material-icons">shopping_cart</i>
                 </a>
                 <ul>
-                    <li><a className="btn-floating red"><i className="material-icons">insert_chart</i></a></li>
-                    <li><a className="btn-floating yellow darken-1"><i className="material-icons">format_quote</i></a></li>
-                    <li><a className="btn-floating green"><i className="material-icons">publish</i></a></li>
-                    <li><a className="btn-floating blue"><i className="material-icons">attach_file</i></a></li>
+                    
+                    <li><a className="btn-floating red"><i className="material-icons">insert_chart</i></a></li>   
                 </ul>
-            </div>
+    </div>
+    <ul id="slide-out" class="sidenav">
+        <li><div class="user-view">
+        <div class="background">
+            <img src="https://materializecss.com/images/sample-1.jpg"/>
+        </div>
+        <a href="#user"><img class="circle" src={user && user.picture}/></a>
+        <a href="#name"><span class="white-text name">{user && user.nickname}</span></a>
+        <a href="#email"><span class="white-text email">{user && user.email}</span></a>
+        </div></li>
+        {
+            isAuthenticated ? (
+                <li><LogoutButton/></li>
+                ) : (
+                    <li><a href="#!" onClick={() =>loginWithRedirect()}>Login</a></li>
+            )
+        }
+    </ul>
+   
     <style jsx>
         {header}
     </style>

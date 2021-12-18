@@ -1,7 +1,6 @@
 export default {
     async getPhones (parent, args, context) {
         const phones = await context.prisma.phone.findMany()
-        console.log(phones)
         return phones
     },
     async getLaptops(parent, args, context) {

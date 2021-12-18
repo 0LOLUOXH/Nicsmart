@@ -63,7 +63,6 @@ export default function Layout({ Component, pageProps, uri }){
 Layout.getInitialProps = async (appContext) => {
     const domain = process.env.REACT_APP_AUTH0_DOMAIN
     const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
-    console.log(process.env.GRAPHQL_URI)
     const appProps = await App.getInitialProps(appContext);
 
     return { ...appProps,uri:  process.env.GRAPHQL_URI}
