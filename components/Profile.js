@@ -11,13 +11,13 @@ const Profile = () => {
         <div className="Profile"> 
             {/*<JSONPretty data = {user} />*/}
             <img height={48} class="image circle"src={user.picture} alt={user.name} /> 
-            <p className="name"> {user.name}</p>
-            
+            <p className="name"> {user.name}</p>   
         </div>
         <style jsx>
             {style}
         </style>
         </>
+        
         )
     );
     
