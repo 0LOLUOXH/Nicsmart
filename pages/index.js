@@ -1,5 +1,4 @@
 import Head from "next/head"
-import Link from 'next/link';
 import styles from '../styles/test.js'
 import Link from 'next/link';
 
