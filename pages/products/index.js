@@ -2,13 +2,25 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import styles from '../../styles/products'
 import { useQuery, gql } from '@apollo/client';
+import Link from 'next/link';
 
-// const GET_PRODUCTS = gql`
-//     query getProducts {
-//         products {
-// `
+const GET_PRODUCTS = gql`
+    query {
+        getGpus {
+            name,
+            description,
+            image
+        },
+        getLaptops {
+            name,
+            description,
+            image
+        },
+    }
+`
+
 export default function Products() {
-
+    const {loading, data: products} = useQuery(GET_PRODUCTS);
 
     const initalState = {
         devices: {
@@ -61,7 +73,8 @@ export default function Products() {
     useEffect(() => {
         updateOption('devices');
     }, []);
-    
+    console.log(loading);
+    console.log(products);
     return (
         <>
         <Head>
@@ -90,6 +103,30 @@ export default function Products() {
                         {findActive() ? findActive().description : '....'}
                     </h3>
                 </article>
+
+                <section className="products">
+                    {
+                        option.devices.active && !loading && products.getGpus.map(product => (
+                            <div className="card">
+                                <div className="card-image">
+                                    <img width="350px" src={`${product.image}`} alt="Poco x3 Pro GOD" />
+                                    <span class="card-title">{product.name}</span>
+                                </div>
+                                <div className="card-content">
+                                    <p>{product.description}</p>
+                                </div>
+                                <div className="card-action">
+                                    <button className='btn indigo darken-1'>
+                                        <i className="material-icons">shopping_cart</i>
+                                    </button>
+                                    <Link href="/products/phone/a">
+                                        <a>Mas info</a>
+                                    </Link>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </section>
             </section>
             <style jsx>
                 { styles}

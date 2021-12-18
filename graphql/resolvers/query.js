@@ -4,14 +4,18 @@ export default {
         console.log(phones)
         return phones
     },
-    getLaptops() {
-        return [];
+    async getLaptops(parent, args, context) {
+        const laptops = await context.prisma.laptop.findMany()
+        
+        return laptops;
     },
-    getCpus() {
-        return [];
+    async getCpus(parent, args, context) {
+        const cpus = await context.prisma.cpu.findMany()
+        return cpus;
     },
-    getGpus() {
-        return [];
+    async getGpus(parent, args, context) {
+        const gpus = await context.prisma.gpu.findMany()
+        return gpus;
     },
     getMemories() {
         return [];
