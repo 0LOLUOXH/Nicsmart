@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from 'next/link';
 import styles from '../styles/test.js'
 import Link from 'next/link';
 
@@ -73,9 +74,13 @@ export default function Home(){
                                     </div>
 
                                     <div className="col l5">
-                                        <a className="color_h2" href="#">
-                                            Descubrir
-                                        </a>
+                                        <Link href="/products">
+                                            <a className="color_h2" href="#">
+                                                Descubrir <i className="material-icons">
+                                                    navigate_next
+                                                </i>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -95,9 +100,13 @@ export default function Home(){
                                     </div>
 
                                     <div className="col l5">
-                                        <a className="color_h2" href="#">
-                                            Descubrir
-                                        </a>
+                                        <Link href="/products">
+                                            <a className="color_h2" href="#">
+                                                Descubrir<i className="material-icons">
+                                                    navigate_next
+                                                </i>
+                                            </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>     
@@ -144,11 +153,15 @@ export default function Home(){
                     </div>
 
                     <div className="col l12 m">
-                        <a className="color_h2" href="#">Dispositivos inteligentes</a>
+                        <Link href="/products">
+                            <a className="color_h2" href="#">Dispositivos inteligentes</a>
+                        </Link>
                     </div>
 
                     <div className="col l12 m">
+                    <Link href="/products">
                         <a className="color_h2" href="#">Componentes</a>
+                    </Link>
                     </div>
                 </div>
             </footer>
