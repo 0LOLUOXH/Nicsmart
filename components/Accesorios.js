@@ -1,7 +1,28 @@
 import Link from 'next/link';
 import styles from './styles/productAndPhone'
+import ProductContext from './Context';
+import { useContext } from 'react';
 
 export default function Accesorios({ headset }) {
+    const {products, setProducts} = useContext(ProductContext);
+
+    function addToCartHeadset(e) {
+        const product = products.getHeadsets.find(item => item.name === e.target.dataset.name);
+        // const getProducts = JSON.parse(localStorage.getItem('products')) || []
+        const update = {
+            ...products,
+            getHeadsets: products.getHeadsets.map(item => {
+                if(item.name === e.target.dataset.name) {
+                    return {...item, inCart: product.inCart ? false : true}
+                }
+                return item
+            })
+        }
+        setProducts(update);
+        localStorage.setItem('products', JSON.stringify(update))
+
+    }
+
     return (
         <>
             <section className="products-laptop">
@@ -18,8 +39,14 @@ export default function Accesorios({ headset }) {
                                         <p>{product.description}</p>
                                     </div>
                                     <div className="card-action">
-                                        <button className='btn indigo darken-1'>
-                                            <i className="material-icons">shopping_cart</i>
+                                        <button className='btn indigo darken-1' data-name={product.name} onClick={addToCartHeadset}>
+                                            {
+                                                product.inCart ? (
+                                                    <i className="material-icons">check</i>
+                                                    ) : (	
+                                                    <i className="material-icons">add_shopping_cart</i>
+                                                )
+                                            }
                                         </button>
                                         <Link href="/products/phone/a">
                                             <a>Mas info</a>

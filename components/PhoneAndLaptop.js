@@ -1,13 +1,43 @@
 import Link from 'next/link';
 import styles from './styles/productAndPhone'
+import { useContext } from 'react';
+import ProductContext from './Context';
 
 export default function PhoneAndLaptops({ phone, laptop }) {
-    function addToCart(e) {
-        console.log(e.target)
-        console.log(e.target.dataset.name)
-        const product = laptop.find(product => product.name === e.target.dataset.name)
-        console.log(product)
-        localStorage.setItem('product', JSON.stringify(product))
+    const {products, setProducts} = useContext(ProductContext);
+    
+    function addToCartLaptop(e) {
+        const product = products.getLaptops.find(item => item.name === e.target.dataset.name);
+        // const getProducts = JSON.parse(localStorage.getItem('products')) || []
+        const update = {
+            ...products,
+            getLaptops: products.getLaptops.map(item => {
+                if(item.name === e.target.dataset.name) {
+                    return {...item, inCart: product.inCart ? false : true}
+                }
+                return item
+            })
+        }
+        setProducts(update);
+        localStorage.setItem('products', JSON.stringify(update))
+
+    }
+
+    function addToCartPhone(e) {
+        const product = products.getPhones.find(item => item.name === e.target.dataset.name);
+        // const getProducts = JSON.parse(localStorage.getItem('products')) || []
+        const update = {
+            ...products,
+            getPhones: products.getPhones.map(item => {
+                if(item.name === e.target.dataset.name) {
+                    return {...item, inCart: product.inCart ? false : true}
+                }
+                return item
+            })
+        }
+        setProducts(update);
+        localStorage.setItem('products', JSON.stringify(update))
+
     }
     
     return (
@@ -26,8 +56,14 @@ export default function PhoneAndLaptops({ phone, laptop }) {
                                         <p>{product.description}</p>
                                     </div>
                                     <div className="card-action">
-                                        <button className='btn indigo darken-1' data-name={product.name} onClick={addToCart}>
-                                            <i className="material-icons">shopping_cart</i>
+                                        <button className='btn indigo darken-1' data-name={product.name} onClick={addToCartLaptop}>
+                                        {
+                                            product.inCart ? (
+                                                <i className="material-icons">check</i>
+                                                ) : (	
+                                                <i className="material-icons">add_shopping_cart</i>
+                                            )
+                                        }
                                         </button>
                                         <Link href="/products/phone/a">
                                             <a>Mas info</a>
@@ -52,8 +88,14 @@ export default function PhoneAndLaptops({ phone, laptop }) {
                                         <p>{product.description}</p>
                                     </div>
                                     <div className="card-action">
-                                        <button className='btn indigo darken-1'>
-                                            <i className="material-icons">shopping_cart</i>
+                                        <button className='btn indigo darken-1' data-name={product.name} onClick={addToCartPhone}>
+                                        {
+                                            product.inCart ? (
+                                                <i className="material-icons">check</i>
+                                                ) : (	
+                                                <i className="material-icons">add_shopping_cart</i>
+                                            )
+                                            }
                                         </button>
                                         <Link href="/products/phone/a">
                                             <a>Mas info</a>

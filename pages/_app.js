@@ -9,6 +9,8 @@ import  '../styles/styles.css'
 import { useApollo } from '../lib/apollo';
 import { ApolloProvider } from '@apollo/client';
 
+import { ProductContextProvider } from '../components/Context';
+
 export default function Layout({ Component, pageProps, uri }){
     const intialApolloState = useApollo(pageProps.initialApolloState, uri)
 
@@ -46,8 +48,10 @@ export default function Layout({ Component, pageProps, uri }){
                 
             
                 <ApolloProvider client={intialApolloState}>
-                    <Header />
-                    <Component {...pageProps} />
+                    <ProductContextProvider>
+                        <Header />
+                        <Component {...pageProps} />
+                    </ProductContextProvider>
                 </ApolloProvider>
             </Auth0Provider>
         </>

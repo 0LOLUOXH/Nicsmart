@@ -1,10 +1,11 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import styles from '../../styles/products'
 import { useQuery, gql } from '@apollo/client';
 import PhoneAndLaptops from '../../components/PhoneAndLaptop';
 import Components from '../../components/Components';
 import Accesorios from '../../components/Accesorios';
+import productContext from '../../components/Context';
 
 const GET_PRODUCTS = gql`
     query {
@@ -48,8 +49,8 @@ const GET_PRODUCTS = gql`
 `
 
 export default function Products() {
-    const {loading, data: products} = useQuery(GET_PRODUCTS);
-
+    // const {loading, data: products} = useQuery(GET_PRODUCTS);
+    
     const initalState = {
         devices: {
             title: 'Dispositivos',
@@ -67,8 +68,11 @@ export default function Products() {
             active: false,
         }
     }
-
+    
     const [option, setOption] = useState(initalState);
+    // useContext
+    const { products } = useContext(productContext);
+    console.log(products)
     // const { loading, error, data } = useQuery(GET_PRODUCTS);
 
     function findActive() {
@@ -101,8 +105,8 @@ export default function Products() {
     useEffect(() => {
         updateOption('devices');
     }, []);
-    console.log(loading);
-    console.log(products);
+    // console.log(loading);
+    // console.log(products);
     return (
         <>
         <Head>
@@ -131,9 +135,9 @@ export default function Products() {
                         {findActive() ? findActive().description : '....'}
                     </h3>
                 </article>
-                { option.devices.active && !loading && <PhoneAndLaptops phone={products.getPhones} laptop={products.getLaptops} /> }
-                { option.components.active && !loading && <Components gpu={products.getGpus} cpu={products.getCpus} memory={products.getMemories} /> }
-                { option.accesorios.active && !loading && <Accesorios headset={products.getHeadsets} /> }
+                { option.devices.active && Object.keys(products).length > 0 && <PhoneAndLaptops phone={products.getPhones} laptop={products.getLaptops} /> }
+                { option.components.active && Object.keys(products).length > 0 && <Components gpu={products.getGpus} cpu={products.getCpus} memory={products.getMemories} /> }
+                { option.accesorios.active && Object.keys(products).length > 0 && <Accesorios headset={products.getHeadsets} /> }
             </section>
             <style jsx>
                 { styles}
