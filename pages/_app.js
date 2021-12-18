@@ -11,7 +11,7 @@ import { ApolloProvider } from '@apollo/client';
 
 import { ProductContextProvider } from '../components/Context';
 
-export default function Layout({ Component, pageProps, uri }){
+export default function Layout({ Component, pageProps, uri, urlAuth }){
     const intialApolloState = useApollo(pageProps.initialApolloState, uri)
 
     async function initMaterialize(){
@@ -42,7 +42,7 @@ export default function Layout({ Component, pageProps, uri }){
             <Auth0Provider
             domain={"dev-fbl4xiyw.us.auth0.com"}
             clientId = {"r8MOJbL3McvltAhZzodQpaLGeQK3xlin"} 
-            redirectUri = {"http://localhost:3000"}
+            redirectUri = {urlAuth}
             >
              
                 
@@ -64,6 +64,7 @@ Layout.getInitialProps = async (appContext) => {
     const domain = process.env.REACT_APP_AUTH0_DOMAIN
     const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
     const appProps = await App.getInitialProps(appContext);
+    const auth0URL = process.env.AUTH0_URL
 
-    return { ...appProps,uri:  process.env.GRAPHQL_URI}
+    return { ...appProps,uri:  process.env.GRAPHQL_URI, urlAuth: auth0URL}
 }
