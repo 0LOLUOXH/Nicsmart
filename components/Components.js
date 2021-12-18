@@ -81,7 +81,7 @@ export default function Components({ cpu, gpu, memory}) {
                                             )
                                             }
                                         </button>
-                                        <Link href="/products/phone/a">
+                                        <Link href={`/products/gpu/${product.name}`}>
                                             <a>Mas info</a>
                                         </Link>
                                     </div>
@@ -113,7 +113,7 @@ export default function Components({ cpu, gpu, memory}) {
                                             )
                                         }
                                         </button>
-                                        <Link href="/products/phone/a">
+                                        <Link href={`/products/cpu/${product.name}`}>
                                             <a>Mas info</a>
                                         </Link>
                                     </div>
@@ -145,7 +145,7 @@ export default function Components({ cpu, gpu, memory}) {
                                                 )
                                             }
                                         </button>
-                                        <Link href="/products/phone/a">
+                                        <Link href={`/products/memory/${product.name}`}>
                                             <a>Mas info</a>
                                         </Link>
                                     </div>
