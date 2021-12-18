@@ -37,25 +37,17 @@ export default css`
         pointer-events: none;
     }
 
+    .intro, .products {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .intro-title {
         font-size: 2rem;
     }
 
     .intro-info {
         font-size: 1.2rem;
-    }
-
-    .products {
-        width: 90%;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 0 1rem;
-    }
-    .card-action {
-        display: flex;
-        gap: 0 0.5rem;
-        align-items: center;
     }
     
 `

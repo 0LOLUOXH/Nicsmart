@@ -2,20 +2,48 @@ import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import styles from '../../styles/products'
 import { useQuery, gql } from '@apollo/client';
-import Link from 'next/link';
+import PhoneAndLaptops from '../../components/PhoneAndLaptop';
+import Components from '../../components/Components';
+import Accesorios from '../../components/Accesorios';
 
 const GET_PRODUCTS = gql`
     query {
-        getGpus {
+        getPhones {
             name,
             description,
-            image
+            image,
+            price
         },
         getLaptops {
             name,
             description,
-            image
+            image,
+            price
         },
+        getCpus {
+            name,
+            description,
+            image,
+            price
+        },
+        getGpus {
+            name,
+            description,
+            image,
+            price
+        },
+        getMemories {
+            name,
+            description,
+            image,
+            price
+        },
+        getHeadsets {
+            name,
+            description,
+            image,
+            price
+        }
     }
 `
 
@@ -103,30 +131,9 @@ export default function Products() {
                         {findActive() ? findActive().description : '....'}
                     </h3>
                 </article>
-
-                <section className="products">
-                    {
-                        option.devices.active && !loading && products.getGpus.map(product => (
-                            <div className="card">
-                                <div className="card-image">
-                                    <img width="350px" src={`${product.image}`} alt="Poco x3 Pro GOD" />
-                                    <span class="card-title">{product.name}</span>
-                                </div>
-                                <div className="card-content">
-                                    <p>{product.description}</p>
-                                </div>
-                                <div className="card-action">
-                                    <button className='btn indigo darken-1'>
-                                        <i className="material-icons">shopping_cart</i>
-                                    </button>
-                                    <Link href="/products/phone/a">
-                                        <a>Mas info</a>
-                                    </Link>
-                                </div>
-                            </div>
-                        ))
-                    }
-                </section>
+                { option.devices.active && !loading && <PhoneAndLaptops phone={products.getPhones} laptop={products.getGpus} /> }
+                { option.components.active && !loading && <Components gpu={products.getLaptops} cpu={products.getGpus} memory={products.getMemories} /> }
+                { option.accesorios.active && !loading && <Accesorios headset={products.getHeadsets} /> }
             </section>
             <style jsx>
                 { styles}

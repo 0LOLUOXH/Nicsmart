@@ -17,10 +17,12 @@ export default {
         const gpus = await context.prisma.gpu.findMany()
         return gpus;
     },
-    getMemories() {
-        return [];
+    async getMemories(parent, args, context) {
+        const memory = await context.prisma.memory.findMany()
+        return memory;
     },
-    getHeadsets() {
-        return [];
+    async getHeadsets(parent, args, context) {
+        const headset = await context.prisma.headset.findMany()
+        return headset;
     },
 }
