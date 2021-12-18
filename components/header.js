@@ -6,7 +6,7 @@ import Profile from './Profile';
 import header from './styles/header';
 
 export default function Header() {
-    const { loginWithRedirect} = useAuth0();
+    const { loginWithRedirect, isAuthenticated} = useAuth0();
     return (
         <>
         <header>
@@ -14,9 +14,6 @@ export default function Header() {
             <div className="nav-wrapper">
             <Link href="/"><a href="#!" className="brand-logo center header-logo"><img height="35px" src="/images/lo.png" alt="xdxdd" /></a></Link>
                 <ul className="left hide-on-med-and-down">
-                    <li>
-                        <a href="#">Promociones</a>
-                    </li>
                     <li>
                         <Link href="/products">
                             <a>Productos</a>
@@ -26,9 +23,9 @@ export default function Header() {
 
                     <a className='dropdown-trigger btn' href='#' data-target='dropdown1'  >Cuenta</a>
                     <ul id='dropdown1' className='dropdown-content'>
-                        <li><a href="#!" onClick={() => loginWithRedirect()}>Iniciar de sesión</a></li> 
+                        
                         <li className="divider" tabIndex="-1"></li>
-                        <li><LogoutButton/></li>
+                        {isAuthenticated ? <LogoutButton /> : <li><a href="#!" onClick={() => loginWithRedirect()}>Iniciar de sesión</a></li> }
                     </ul>
                 </ul> 
                 <Profile/>
