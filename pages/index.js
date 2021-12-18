@@ -24,18 +24,20 @@ export default function Home(){
                     <p className="otro_h2">En nicsmart encontrarás los productos de tu preferencia y<br></br>con disponibilidad de pago
                     en línea evitando que pierdas tu tiempo.
                     </p>
-                    <a className="boton" href="#">
-                        Catálogo &nbsp;
-                        <i className="material-icons">
-                            import_contacts
-                        </i>
-                    
-                    </a>
+                    <Link href="/products">
+                        <a className="boton" href="#">
+                            Catálogo &nbsp;
+                            <i className="material-icons">
+                                import_contacts
+                            </i>
+                        
+                        </a>
+                    </Link>
                 </div> 
 
 
                 <div className="col l6 box_m2 mobile-hidden">
-                        <img src="/images/righy-hero.png" alt="" />
+                        <img src="/images/Fram.png" alt="" />
                 </div>
 
             </div>
@@ -108,7 +110,7 @@ export default function Home(){
                         </div>
 
                         <div className="col l7 m end-title" >
-                            <h2>Estamos disponibles 24hr/256d con disponibilidad global y atención al cliente.</h2>
+                            <h2>Estamos disponibles 24hr/365d con disponibilidad global y atención al cliente.</h2>
                         </div>
 
                         <div className="col l5 m yellow-image">

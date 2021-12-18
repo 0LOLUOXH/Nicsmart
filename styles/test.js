@@ -104,7 +104,7 @@ export default css`
         padding-bottom:20px;
         padding-left:40px;
         padding-right:40px;
-        background-color:#007FFF;
+        background-color:#26a69a;
         margin-top: .5rem;
         display: inline-block;
     }
@@ -169,7 +169,7 @@ export default css`
     }
 
     .blue-title {
-        color: #007FFF;
+        color: #26a69a;
     }
 
     .title-v p {
